@@ -1,0 +1,33 @@
+.nav-menu {    
+      
+    @media screen and (max-width: 767px) {
+        display: none;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 5;
+        transform: translateY(100%);
+        width: 100%;
+        padding: 60px;
+        text-align: center;    
+        background: #FFFFFF;
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.16), 
+                    0 2px 4px rgba(0, 0, 0, 0.08), 
+                    0 4px 8px rgba(0, 0, 0, 0.04);
+
+        transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+        &.is-open {
+            display: block;
+            transform: translateY(60px);
+        }
+    
+    }
+      
+    @media screen and (min-width: 768px) {    
+        display: flex;
+        justify-content: space-between;
+        padding: 0;
+    }
+    
+}
+

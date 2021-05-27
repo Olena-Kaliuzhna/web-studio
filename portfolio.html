@@ -1,0 +1,800 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio</title>
+    <!-- <link
+      href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700&display=swap"
+      rel="stylesheet"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/0.6.0/modern-normalize.min.css" /> -->
+    <link rel="stylesheet" href="./css/main.min.css" />
+  </head>
+  <body>
+    <!--page-header-->
+    <header class="main-header">
+      <div class="page-header container">
+        <!--page-nav-->
+
+        <nav class="page-nav">
+          <a class="logo" href="./index.html"> Web <span class="logo-header">Studio</span> </a>
+
+          <button
+            type="button"
+            class="menu-button"
+            aria-expanded="false"
+            aria-controls="nav-menu"
+            data-menu-button
+          >
+            <svg width="40" height="40" aria-label="Переключатель мобильного меню">
+              <use class="icon-menu" href="./images/sprite-icon.svg#icon-menu"></use>
+              <use class="icon-cross" href="./images/sprite-icon.svg#icon-cross"></use>
+            </svg>
+          </button>
+
+          <div class="nav-menu" id="nav-menu" data-menu>
+            <ul class="page-nav-list">
+              <li class="page-nav-item"><a class="page-nav-link" href="./index.html">Студия</a></li>
+              <li class="page-nav-item">
+                <a class="page-nav-link active" href="./portfolio.html">Портфолио</a>
+              </li>
+              <li class="page-nav-item">
+                <a class="page-nav-link" href="./contacts.html">Контакты</a>
+              </li>
+            </ul>
+
+            <!--Contacts-->
+            <ul class="nav-contacts">
+              <li class="nav-contacts-item">
+                <a class="nav-contacts-link" href="mailto:info@devstudio.com">
+                  <svg class="nav-contacts-icon" width="16" height="12">
+                    <use href="./images/sprite-icon.svg#icon-envelope"></use></svg
+                  >info@devstudio.com
+                </a>
+              </li>
+              <li class="nav-contacts-item">
+                <a class="nav-contacts-link" href="tel:+380961111111">
+                  <svg class="nav-contacts-icon" width="10" height="15">
+                    <use href="./images/sprite-icon.svg#icon-smartphone"></use>
+                  </svg>
+                  +38 096 111 11 11</a
+                >
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <!-- page-portfolio -->
+      <section class="page-portfolio section">
+        <div class="container">
+          <h1 class="section-title visually-hidden">Наши проекты</h1>
+          <!-- portfolio-filters -->
+          <ul class="filters-list">
+            <li class="filters-item"><button class="filters-button" type="button">Все</button></li>
+            <li class="filters-item">
+              <button class="filters-button" type="button">Веб-сайты</button>
+            </li>
+            <li class="filters-item">
+              <button class="filters-button" type="button">Приложения</button>
+            </li>
+            <li class="filters-item">
+              <button class="filters-button" type="button">Дизайн</button>
+            </li>
+            <li class="filters-item">
+              <button class="filters-button" type="button">Маркетинг</button>
+            </li>
+          </ul>
+
+          <!--project-portfolio -->
+
+          <ul class="projects-list">
+            <li class="projects-item">
+              <a class="projects-link" href="#">
+                <div class="projects-overlay">
+                  <picture>
+                    <source
+                      srcset="./images/project-1-mob.webp 1x, ./images/project-1-mob@2x.webp 2x"
+                      media="(max-width: 767px)"
+                      type="image/webp"
+                    />
+
+                    <source
+                      srcset="./images/project-1.webp 1x, ./images/project-1@2x.webp 2x"
+                      media="(min-width: 1200px)
+                    "
+                      type="image/webp"
+                    />
+
+                    <source
+                      srcset="./images/project-1-tab.webp 1x, ./images/project-1-tab@2x.webp 2x"
+                      media="(min-width: 768px)
+                    "
+                      type="image/webp"
+                    />
+
+                    <source
+                      srcset="./images/project-1-mob.jpg 1x, ./images/project-1-mob@2x.jpg 2x"
+                      media="(max-width: 767px)"
+                      type="image/jpg"
+                    />
+
+                    <source
+                      srcset="./images/project-1.jpg 1x, ./images/project-1@2x.jpg 2x"
+                      media="(min-width: 1200px)
+                    "
+                      type="image/jpg"
+                    />
+
+                    <source
+                      srcset="./images/project-1-tab.jpg 1x, ./images/project-1-tab@2x.jpg 2x"
+                      media="(min-width: 768px)
+                    "
+                      type="image/jpg"
+                    />
+
+                    <img
+                      srcset="
+                        ./images/project-1.jpg     480w,
+                        ./images/project-1@2x.jpg  768w,
+                        ./images/project-1@3x.jpg 1200w
+                      "
+                      class="projects-image"
+                      src="./images/project-1.jpg"
+                      alt="экран ноутбука с карточками людей"
+                      sizes="(min-width: 1200px) 33.333vw, (min-width: 768px) 50vw,  100vw"
+                    />
+                  </picture>
+
+                  <p class="project-description">
+                    Создаем сайты любой сложности - эксклюзивные веб-сайты с невероятно высокой
+                    конверсией
+                  </p>
+                </div>
+                <div class="projects-label">
+                  <h2 class="project-title">Технокряк</h2>
+                  <p class="projects-type">Веб-сайт</p>
+                </div>
+              </a>
+            </li>
+
+            <li class="projects-item">
+              <a class="projects-link" href="#">
+                <div class="projects-overlay">
+                  <picture>
+                    <source
+                      srcset="./images/project-2-mob.webp 1x, ./images/project-2-mob@2x.webp 2x"
+                      media="(max-width: 767px)"
+                      type="image/webp"
+                    />
+
+                    <source
+                      srcset="./images/project-2.webp 1x, ./images/project-2@2x.webp 2x"
+                      media="(min-width: 1200px)
+                    "
+                      type="image/webp"
+                    />
+
+                    <source
+                      srcset="./images/project-2-tab.webp 1x, ./images/project-2-tab@2x.webp 2x"
+                      media="(min-width: 768px)
+                    "
+                      type="image/webp"
+                    />
+
+                    <source
+                      srcset="./images/project-2-mob.jpg 1x, ./images/project-2-mob@2x.jpg 2x"
+                      media="(max-width: 767px)"
+                      type="image/jpg"
+                    />
+
+                    <source
+                      srcset="./images/project-2.jpg 1x, ./images/project-2@2x.jpg 2x"
+                      media="(min-width: 1200px)
+                  "
+                      type="image/jpg"
+                    />
+
+                    <source
+                      srcset="./images/project-2-tab.jpg 1x, ./images/project-2-tab@2x.jpg 2x"
+                      media="(min-width: 768px)
+                  "
+                      type="image/jpg"
+                    />
+                    <img
+                      srcset="
+                        ./images/project-2.jpg     480w,
+                        ./images/project-2@2x.jpg  768w,
+                        ./images/project-2@3x.jpg 1200w
+                      "
+                      class="projects-image"
+                      src="./images/project-2.jpg"
+                      alt="два баскетболиста"
+                      sizes="(min-width: 1200px) 33.333vw, (min-width: 768px) 50vw,  100vw"
+                    />
+                  </picture>
+
+                  <p class="project-description">
+                    Дизайн сайта - это создание логической структуры для каждой из страниц,
+                    гармоничное художественное оформление веб-ресурса в соответствии с его тематикой
+                    и целью.
+                  </p>
+                </div>
+                <div class="projects-label">
+                  <h2 class="project-title">Постер New Orlean vs Golden Star</h2>
+                  <p class="projects-type">Дизайн</p>
+                </div>
+              </a>
+            </li>
+
+            <li class="projects-item">
+              <a class="projects-link" href="#">
+                <div class="projects-overlay">
+                  <picture>
+                    <source
+                      srcset="./images/project-3-mob.webp 1x, ./images/project-3-mob@2x.webp 2x"
+                      media="(max-width: 767px)"
+                      type="image/webp"
+                    />
+
+                    <source
+                      srcset="./images/project-3.webp 1x, ./images/project-3@2x.webp 2x"
+                      media="(min-width: 1200px)
+                    "
+                      type="image/webp"
+                    />
+
+                    <source
+                      srcset="./images/project-3-tab.webp 1x, ./images/project-3-tab@2x.webp 2x"
+                      media="(min-width: 768px)
+                    "
+                      type="image/webp"
+                    />
+
+                    <source
+                      srcset="./images/project-3-mob.jpg 1x, ./images/project-3-mob@2x.jpg 2x"
+                      media="(max-width: 767px)"
+                      type="image/jpg"
+                    />
+
+                    <source
+                      srcset="./images/project-3.jpg 1x, ./images/project-3@2x.jpg 2x"
+                      media="(min-width: 1200px)
+                    "
+                      type="image/jpg"
+                    />
+
+                    <source
+                      srcset="./images/project-3-tab.jpg 1x, ./images/project-3-tab@2x.jpg 2x"
+                      media="(min-width: 768px)
+                    "
+                      type="image/jpg"
+                    />
+
+                    <img
+                      srcset="
+                        ./images/project-3.jpg     480w,
+                        ./images/project-3@2x.jpg  768w,
+                        ./images/project-3@3x.jpg 1200w
+                      "
+                      class="projects-image"
+                      src="./images/project-3.jpg"
+                      alt="логотип ресторана с рыбой"
+                      sizes="(min-width: 1200px) 33.333vw, (min-width: 768px) 50vw,  100vw"
+                    />
+                  </picture>
+
+                  <p class="project-description">
+                    Мы создаем веб-приложения любого масштаба, уровня сложности и отраслевой
+                    направленности. Каждый проект разрабатывается, исходя из конкретных бизнес-целей
+                    наших заказчиков.
+                  </p>
+                </div>
+                <div class="projects-label">
+                  <h2 class="project-title">Ресторан Seafood</h2>
+                  <p class="projects-type">Приложение</p>
+                </div>
+              </a>
+            </li>
+
+            <li class="projects-item">
+              <a class="projects-link" href="#">
+                <div class="projects-overlay">
+                  <picture>
+                    <source
+                      srcset="./images/project-4-mob.webp 1x, ./images/project-4-mob@2x.webp 2x"
+                      media="(max-width: 767px)"
+                      type="image/webp"
+                    />
+
+                    <source
+                      srcset="./images/project-4.webp 1x, ./images/project-4@2x.webp 2x"
+                      media="(min-width: 1200px)
+                    "
+                      type="image/webp"
+                    />
+
+                    <source
+                      srcset="./images/project-4-tab.webp 1x, ./images/project-4-tab@2x.webp 2x"
+                      media="(min-width: 768px)
+                    "
+                      type="image/webp"
+                    />
+
+                    <source
+                      srcset="./images/project-4-mob.jpg 1x, ./images/project-4-mob@2x.jpg 2x"
+                      media="(max-width: 767px)"
+                      type="image/jpg"
+                    />
+
+                    <source
+                      srcset="./images/project-4.jpg 1x, ./images/project-4@2x.jpg 2x"
+                      media="(min-width: 1200px)
+                    "
+                      type="image/jpg"
+                    />
+
+                    <source
+                      srcset="./images/project-4-tab.jpg 1x, ./images/project-4-tab@2x.jpg 2x"
+                      media="(min-width: 768px)
+                    "
+                      type="image/jpg"
+                    />
+
+                    <img
+                      srcset="
+                        ./images/project-4.jpg     480w,
+                        ./images/project-4@2x.jpg  768w,
+                        ./images/project-4@3x.jpg 1200w
+                      "
+                      class="projects-image"
+                      src="./images/project-4.jpg"
+                      alt="наушники"
+                      sizes="(min-width: 1200px) 33.333vw, (min-width: 768px) 50vw,  100vw"
+                    />
+                  </picture>
+
+                  <p class="project-description">
+                    Предлагаем вам комплекс услуг по продвижению вашего сайта в интернете. Основная
+                    цель продвижения — быстрое увеличение количества потенциальных клиентов,
+                    приходящих к вам через сайт.
+                  </p>
+                </div>
+                <div class="projects-label">
+                  <h2 class="project-title">Проект Prime</h2>
+                  <p class="projects-type">Маркетинг</p>
+                </div>
+              </a>
+            </li>
+
+            <li class="projects-item">
+              <a class="projects-link" href="#">
+                <div class="projects-overlay">
+                  <picture>
+                    <source
+                      srcset="./images/project-5-mob.webp 1x, ./images/project-5-mob@2x.webp 2x"
+                      media="(max-width: 767px)"
+                      type="image/webp"
+                    />
+
+                    <source
+                      srcset="./images/project-5.webp 1x, ./images/project-5@2x.webp 2x"
+                      media="(min-width: 1200px)
+                    "
+                      type="image/webp"
+                    />
+
+                    <source
+                      srcset="./images/project-5-tab.webp 1x, ./images/project-5-tab@2x.webp 2x"
+                      media="(min-width: 768px)
+                    "
+                      type="image/webp"
+                    />
+
+                    <source
+                      srcset="./images/project-5-mob.jpg 1x, ./images/project-5-mob@2x.jpg 2x"
+                      media="(max-width: 767px)"
+                      type="image/jpg"
+                    />
+
+                    <source
+                      srcset="./images/project-5.jpg 1x, ./images/project-5@2x.jpg 2x"
+                      media="(min-width: 1200px)
+                    "
+                      type="image/jpg"
+                    />
+
+                    <source
+                      srcset="./images/project-5-tab.jpg 1x, ./images/project-5-tab@2x.jpg 2x"
+                      media="(min-width: 768px)
+                    "
+                      type="image/jpg"
+                    />
+
+                    <img
+                      srcset="
+                        ./images/project-5.jpg     480w,
+                        ./images/project-5@2x.jpg  768w,
+                        ./images/project-5@3x.jpg 1200w
+                      "
+                      class="projects-image"
+                      src="./images/project-5.jpg"
+                      alt="две коробки"
+                      sizes="(min-width: 1200px) 33.333vw, (min-width: 768px) 50vw,  100vw"
+                    />
+                  </picture>
+
+                  <p class="project-description">
+                    Мы создаем веб-приложения любого масштаба, уровня сложности и отраслевой
+                    направленности. Каждый проект разрабатывается, исходя из конкретных бизнес-целей
+                    наших заказчиков.
+                  </p>
+                </div>
+                <div class="projects-label">
+                  <h2 class="project-title">Проект Boxes</h2>
+                  <p class="projects-type">Приложение</p>
+                </div>
+              </a>
+            </li>
+
+            <li class="projects-item">
+              <a class="projects-link" href="#">
+                <div class="projects-overlay">
+                  <picture>
+                    <source
+                      srcset="./images/project-6-mob.webp 1x, ./images/project-6-mob@2x.webp 2x"
+                      media="(max-width: 767px)"
+                      type="image/webp"
+                    />
+
+                    <source
+                      srcset="./images/project-6.webp 1x, ./images/project-6@2x.webp 2x"
+                      media="(min-width: 1200px)
+                    "
+                      type="image/webp"
+                    />
+
+                    <source
+                      srcset="./images/project-6-tab.webp 1x, ./images/project-6-tab@2x.webp 2x"
+                      media="(min-width: 768px)
+                    "
+                      type="image/webp"
+                    />
+
+                    <source
+                      srcset="./images/project-6-mob.jpg 1x, ./images/project-6-mob@2x.jpg 2x"
+                      media="(max-width: 767px)"
+                      type="image/jpg"
+                    />
+
+                    <source
+                      srcset="./images/project-6.jpg 1x, ./images/project-6@2x.jpg 2x"
+                      media="(min-width: 1200px)
+                    "
+                      type="image/jpg"
+                    />
+
+                    <source
+                      srcset="./images/project-6-tab.jpg 1x, ./images/project-6-tab@2x.jpg 2x"
+                      media="(min-width: 768px)
+                    "
+                      type="image/jpg"
+                    />
+
+                    <img
+                      srcset="
+                        ./images/project-6.jpg     480w,
+                        ./images/project-6@2x.jpg  768w,
+                        ./images/project-6@3x.jpg 1200w
+                      "
+                      class="projects-image"
+                      src="./images/project-6.jpg"
+                      alt="монитор"
+                      sizes="(min-width: 1200px) 33.333vw, (min-width: 768px) 50vw,  100vw"
+                    />
+                  </picture>
+
+                  <p class="project-description">
+                    Создаем сайты любой сложности - эксклюзивные веб-сайты с невероятно высокой
+                    конверсией
+                  </p>
+                </div>
+                <div class="projects-label">
+                  <h2 class="project-title">Inspiration has no Borders</h2>
+                  <p class="projects-type">Веб-сайт</p>
+                </div>
+              </a>
+            </li>
+
+            <li class="projects-item">
+              <a class="projects-link" href="#">
+                <div class="projects-overlay">
+                  <picture>
+                    <source
+                      srcset="./images/project-7-mob.webp 1x, ./images/project-7-mob@2x.webp 2x"
+                      media="(max-width: 767px)"
+                      type="image/webp"
+                    />
+
+                    <source
+                      srcset="./images/project-7.webp 1x, ./images/project-7@2x.webp 2x"
+                      media="(min-width: 1200px)
+                    "
+                      type="image/webp"
+                    />
+
+                    <source
+                      srcset="./images/project-7-tab.webp 1x, ./images/project-7-tab@2x.webp 2x"
+                      media="(min-width: 768px)
+                    "
+                      type="image/webp"
+                    />
+
+                    <source
+                      srcset="./images/project-7-mob.jpg 1x, ./images/project-7-mob@2x.jpg 2x"
+                      media="(max-width: 767px)"
+                      type="image/jpg"
+                    />
+
+                    <source
+                      srcset="./images/project-7.jpg 1x, ./images/project-7@2x.jpg 2x"
+                      media="(min-width: 1200px)
+                    "
+                      type="image/jpg"
+                    />
+
+                    <source
+                      srcset="./images/project-7-tab.jpg 1x, ./images/project-7-tab@2x.jpg 2x"
+                      media="(min-width: 768px)
+                    "
+                      type="image/jpg"
+                    />
+
+                    <img
+                      srcset="
+                        ./images/project-7.jpg     480w,
+                        ./images/project-7@2x.jpg  768w,
+                        ./images/project-7@3x.jpg 1200w
+                      "
+                      class="projects-image"
+                      src="./images/project-7.jpg"
+                      alt="разворот книги"
+                      sizes="(min-width: 1200px) 33.333vw, (min-width: 768px) 50vw,  100vw"
+                    />
+                  </picture>
+
+                  <p class="project-description">
+                    Дизайн сайта - это создание логической структуры для каждой из страниц,
+                    гармоничное художественное оформление веб-ресурса в соответствии с его тематикой
+                    и целью.
+                  </p>
+                </div>
+                <div class="projects-label">
+                  <h2 class="project-title">Издание Limited Edition</h2>
+                  <p class="projects-type">Дизайн</p>
+                </div>
+              </a>
+            </li>
+
+            <li class="projects-item">
+              <a class="projects-link" href="#">
+                <div class="projects-overlay">
+                  <picture>
+                    <source
+                      srcset="./images/project-8-mob.webp 1x, ./images/project-8-mob@2x.webp 2x"
+                      media="(max-width: 767px)"
+                      type="image/webp"
+                    />
+
+                    <source
+                      srcset="./images/project-8.webp 1x, ./images/project-8@2x.webp 2x"
+                      media="(min-width: 1200px)
+                    "
+                      type="image/webp"
+                    />
+
+                    <source
+                      srcset="./images/project-8-tab.webp 1x, ./images/project-8-tab@2x.webp 2x"
+                      media="(min-width: 768px)
+                    "
+                      type="image/webp"
+                    />
+                    <source
+                      srcset="./images/project-8-mob.jpg 1x, ./images/project-8-mob@2x.jpg 2x"
+                      media="(max-width: 767px)"
+                      type="image/jpg"
+                    />
+
+                    <source
+                      srcset="./images/project-8.jpg 1x, ./images/project-8@2x.jpg 2x"
+                      media="(min-width: 1200px)
+                  "
+                      type="image/jpg"
+                    />
+
+                    <source
+                      srcset="./images/project-8-tab.jpg 1x, ./images/project-8-tab@2x.jpg 2x"
+                      media="(min-width: 768px)
+                  "
+                      type="image/jpg"
+                    />
+
+                    <img
+                      srcset="
+                        ./images/project-8.jpg     480w,
+                        ./images/project-8@2x.jpg  768w,
+                        ./images/project-8@3x.jpg 1200w
+                      "
+                      class="projects-image"
+                      src="./images/project-8.jpg"
+                      alt="бирка"
+                      sizes="(min-width: 1200px) 33.333vw, (min-width: 768px) 50vw,  100vw"
+                    />
+                  </picture>
+
+                  <p class="project-description">
+                    Предлагаем вам комплекс услуг по продвижению вашего сайта в интернете. Основная
+                    цель продвижения — быстрое увеличение количества потенциальных клиентов,
+                    приходящих к вам через сайт.
+                  </p>
+                </div>
+                <div class="projects-label">
+                  <h2 class="project-title">Проект LAB</h2>
+                  <p class="projects-type">Маркетинг</p>
+                </div>
+              </a>
+            </li>
+
+            <li class="projects-item">
+              <a class="projects-link" href="#">
+                <div class="projects-overlay">
+                  <picture>
+                    <source
+                      srcset="./images/project-9-mob.webp 1x, ./images/project-9-mob@2x.webp 2x"
+                      media="(max-width: 767px)"
+                      type="image/webp"
+                    />
+
+                    <source
+                      srcset="./images/project-9.webp 1x, ./images/project-9@2x.webp 2x"
+                      media="(min-width: 1200px)
+                      "
+                      type="image/webp"
+                    />
+
+                    <source
+                      srcset="./images/project-9-tab.webp 1x, ./images/project-9-tab@2x.webp 2x"
+                      media="(min-width: 768px)
+                      "
+                      type="image/webp"
+                    />
+
+                    <source
+                      srcset="./images/project-9-mob.jpg 1x, ./images/project-9-mob@2x.jpg 2x"
+                      media="(max-width: 767px)"
+                      type="image/jpg"
+                    />
+
+                    <source
+                      srcset="./images/project-9.jpg 1x, ./images/project-9@2x.jpg 2x"
+                      media="(min-width: 1200px)
+                      "
+                      type="image/jpg"
+                    />
+
+                    <source
+                      srcset="./images/project-9-tab.jpg 1x, ./images/project-9-tab@2x.jpg 2x"
+                      media="(min-width: 768px)
+                      "
+                      type="image/jpg"
+                    />
+
+                    <img
+                      srcset="
+                        ./images/project-9.jpg     480w,
+                        ./images/project-9@2x.jpg  768w,
+                        ./images/project-9@3x.jpg 1200w
+                      "
+                      class="projects-image"
+                      src="./images/project-9.jpg"
+                      alt="ноутбука"
+                      sizes="(min-width: 1200px) 33.333vw, (min-width: 768px) 50vw,  100vw"
+                    />
+                  </picture>
+
+                  <p class="project-description">
+                    Создаем сайты любой сложности - эксклюзивные веб-сайты с невероятно высокой
+                    конверсией
+                  </p>
+                </div>
+                <div class="projects-label">
+                  <h2 class="project-title">Growing Business</h2>
+                  <p class="projects-type">Веб-сайт</p>
+                </div>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </section>
+    </main>
+
+    <!--page-footer-->
+    <footer class="footer-section">
+      <div class="page-footer container">
+        <!--footer-contacts-->
+
+        <div class="footer-contacts">
+          <a class="logo" href="./index.html"> Web <span class="logo-footer">Studio</span> </a>
+          <address>
+            <p class="footer-address">г. Киев, пр-т Леси Украинки, 26</p>
+            <ul class="footer-contacts-list">
+              <li>
+                <a class="footer-mail" href="mailto:info@devstudio.com">info@devstudio.com</a>
+              </li>
+              <li><a class="footer-tel" href="tel:+380961111111">+38 096 111 11 11</a></li>
+            </ul>
+          </address>
+        </div>
+
+        <!--footer-socials-->
+        <div class="footer-join">
+          <h3 class="join">присоединяйтесь</h3>
+          <ul class="footer-socials-list">
+            <li class="footer-socials-item">
+              <a class="footer-socials-link" href="#" aria-label="instagram">
+                <svg class="footer-social-icon" width="20" height="20">
+                  <use href="./images/sprite-icon.svg#icon-instagram"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="footer-socials-item">
+              <a class="footer-socials-link" href="#" aria-label="twitter">
+                <svg class="footer-social-icon" width="20" height="20">
+                  <use href="./images/sprite-icon.svg#icon-twitter"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="footer-socials-item">
+              <a class="footer-socials-link" href="#" aria-label="facebook">
+                <svg class="footer-social-icon" width="20" height="20">
+                  <use href="./images/sprite-icon.svg#icon-facebook"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="footer-socials-item">
+              <a class="footer-socials-link" href="#" aria-label="linkedin">
+                <svg class="footer-social-icon" width="20" height="20">
+                  <use href="./images/sprite-icon.svg#icon-linkedin"></use>
+                </svg>
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <!--footer-form-subscribe-->
+        <form class="form-subscribe">
+          <p class="subscribe">Подпишитесь на рассылку</p>
+          <div class="subscribe-wrapper">
+            <input
+              class="subscribe-mail"
+              type="email"
+              name="mail"
+              id="subscribe-mail"
+              placeholder="E-mail"
+            />
+            <button class="button" type="submit">Подписаться</button>
+          </div>
+          <!-- <label class="subscribe-wrapper">
+            <input class="subscribe-mail" type="email" name="mail" id="subscribe-mail" placeholder="E-mail" >
+         </label>         
+
+          <button class="button" type="submit">Подписаться</button> -->
+        </form>
+      </div>
+    </footer>
+
+    <script src="./js/menu.js"></script>
+  </body>
+</html>

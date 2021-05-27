@@ -1,0 +1,327 @@
+.backdrop {     
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow-y: auto;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.2);
+    opacity: 1;
+    transition:  all 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+    @media screen and (min-width: 480px) { 
+       padding: 0;
+
+    }    
+    
+}
+  
+.backdrop.is-hidden {
+    opacity: 0;
+    pointer-events: none;
+    visibility: hidden;
+
+}
+
+.modal-wrapper {
+    display: flex;
+    align-items: center;        
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 450px;
+    min-height: calc(100% - 60px);
+    padding: 30px;
+    transform: scale(1);
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+    .backdrop.is-hidden & {
+        transform:  scale(1.2); 
+          
+    }
+
+    @media screen and (min-width: 1200px) {  
+        //     transform: translate(-50%, -50%) scale(1);              
+            max-width: 538px;
+        //     transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    
+        // }
+}
+}
+
+.modal {
+    position: relative;    
+    max-width: 100%;    
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 4px;
+    background: $primary-white-color;
+    box-shadow: 0 2px 1px rgba(0, 0, 0, 0.2), 
+                0 1px 1px rgba(0, 0, 0, 0.14), 
+                0 1px 3px rgba(0, 0, 0, 0.12);
+
+    
+
+    // transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+    
+
+    // @media screen and (min-width: 480px) { 
+    //     position: absolute;              
+    //     top: 50%;
+    //     left: 50%;  
+    //     transform: translate(-50%, -20%) scale(1);        
+    //     max-width: 450px;      
+    //     transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+    // }
+    // @media screen and (min-width: 768px) {          
+    //     transform: translate(-50%, -25%) scale(1);        
+    //     max-width: 450px;  
+               
+
+    // }
+
+    // @media screen and (min-width: 1200px) {  
+    //     transform: translate(-50%, -50%) scale(1);              
+    //     max-width: 538px;
+    //     transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+    // }
+
+    
+    
+
+}
+
+
+
+
+
+
+
+.button-close-form {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 50%;
+    padding: 0;
+    margin: 0;  
+    background: $primary-white-color;
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    outline: none;
+
+    &:focus,
+    &:hover {
+        fill: $accent-color;
+    }
+}
+
+
+
+.form-modal {
+    width: 100%;
+    padding: 20px; 
+        
+    text-align: center; 
+    font-family: $primary-font-family;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.143;
+    letter-spacing: 0.01em;
+    color: $primary-text-color;
+
+} 
+
+
+
+
+.form-title {  
+    margin: 0;
+    margin-bottom: 34px;
+    text-align: center;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 1.5;
+    letter-spacing: 0.03em;
+    color: $title-text-color;
+
+    @media screen and (min-width: 1200px) {            
+        line-height: 1.15;
+    }
+
+}
+
+.form-field{
+    position: relative;
+    margin: 0;
+    margin-bottom: 28px;   
+    font: inherit;
+}
+
+
+
+.form-input {
+    width: 100%;
+    height: 40px;
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    border-radius: 4px;
+    padding: 12px;
+    padding-left: 42px;
+    margin: 0;
+    font-family: $primary-font-family;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.143;
+    letter-spacing: 0.01em;
+    color: $primary-text-color;
+    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    
+    &:focus {
+        outline: none;
+        border-color: $accent-color;
+        font-family: $primary-font-family;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 1.143;
+        letter-spacing: 0.01em;
+        color: $primary-text-color;
+        
+    }
+}
+
+.forms-label {
+    position: absolute;
+    top: 12px;
+    left: 42px;
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1), 
+    color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+    .form-input:focus + &,
+    .form-input:not(:placeholder-shown)+ &{
+        color: $accent-color;
+        transform: translate(-26px, -30px);
+        font-size: 12px;
+        line-height: 1.167;
+    }
+}
+
+.forms-label:last-child {
+    top: 15px;
+    left: 16px;
+    
+    .coment:focus + &,
+    .coment:not(:placeholder-shown) + & {
+        color: $accent-color;
+        transform: translateY(-30px);
+        font-size: 12px;
+        line-height: 1.167;
+    }
+    
+}
+
+.form-icon {
+    position: absolute;
+    top: 11px;
+    left: 16px;
+    fill: $title-text-color;
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    
+    .form-input:focus ~ & {
+        fill: $accent-color;
+    }
+}
+
+
+.form-coment{
+    position: relative;
+    margin: 0;
+    margin-bottom: 20px;  
+    font: inherit;
+}
+.coment {
+    resize: none;
+    width: 100%;
+    height: 120px;
+    padding: 15px 16px 12px;
+    margin: 0;  
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    border-radius: 4px;
+    font: inherit;
+    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+    &:focus {
+        outline: none;
+        border-color: $accent-color;
+    }
+}
+
+
+.form-agreement {  
+    margin: 0;
+    margin-bottom: 30px;
+
+} 
+
+.agreements-label {  
+    position: relative;
+    margin: 0;
+    font-size: 12px;
+    line-height: 1.167;
+    letter-spacing: 0.03em;
+    @media screen and (min-width: 1200px) {            
+        font-size: 14px;
+        line-height: 1.71;
+    }
+}
+
+.agreements-label>a {
+    display: inline-block;
+    margin: 0;
+    font: inherit;
+    color: $accent-color; 
+    font-size: 14px;
+    line-height: 1.167;
+    letter-spacing: 0.03em;
+
+    @media screen and (min-width: 1200px) {            
+        font-size: 14px;
+        line-height: 1.71;
+    }
+}
+
+
+
+.agreements-label::before {
+    content: '';
+    position: absolute;    
+    top: 1px;
+    left: -24px ;  
+    width: 16px;
+    height: 15px;
+    border: 2px solid $title-text-color;
+    border-radius: 2px;  
+    margin: 0;  
+    transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1); 
+
+    .checkbox:checked +& { 
+        border-color: transparent;
+        background-color: $accent-color;
+        background-image: url('../images/icon-check.svg');
+        background-size: contain;
+        background-origin: border-box;  
+        
+    }
+
+}
+
+
+
