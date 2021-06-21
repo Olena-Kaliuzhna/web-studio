@@ -24,7 +24,10 @@
 }
 
 .contacts-logo-wrapper {
-  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 90px;
   margin: 0 -30px 30px;
   padding: 15px 30px;
   width: calc(100% + 60px);
