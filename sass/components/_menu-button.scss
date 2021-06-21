@@ -1,34 +1,29 @@
-.menu-button {    
-    display: inline-flex;
-    margin: 0;
-    padding: 0;
-    border: none;
-    background-color: transparent;
-    outline: none;
+.menu-button {
+  display: inline-flex;
+  margin: 0;
+  padding: 0;
+  border: none;
+  background-color: transparent;
+  outline: none;
 
-    &:hover,
-    &:focus{
-      fill: $accent-color;
-        
-    }
+  &:hover,
+  &:focus {
+    fill: $accent-color;
+  }
 
-    @media screen and (min-width: 768px) {
-        display: none;
-        
-    }
-    
-    
+  @media screen and (min-width: 768px) {
+    display: none;
+  }
 }
 
-
 .menu-button .icon-cross {
-    display: none;
+  display: none;
 }
 
 .menu-button.is-open .icon-cross {
-    display: block;
+  display: block;
 }
 
 .menu-button.is-open .icon-menu {
-    display: none;
+  display: none;
 }

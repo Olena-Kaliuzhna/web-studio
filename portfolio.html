@@ -73,25 +73,29 @@
           <h1 class="section-title visually-hidden">Наши проекты</h1>
           <!-- portfolio-filters -->
           <ul class="filters-list">
-            <li class="filters-item"><button class="filters-button" type="button">Все</button></li>
             <li class="filters-item">
-              <button class="filters-button" type="button">Веб-сайты</button>
+              <button class="filters-button" type="button" data-filter="all">Все</button>
             </li>
             <li class="filters-item">
-              <button class="filters-button" type="button">Приложения</button>
+              <button class="filters-button" type="button" data-filter="websites">Веб-сайты</button>
             </li>
             <li class="filters-item">
-              <button class="filters-button" type="button">Дизайн</button>
+              <button class="filters-button" type="button" data-filter="app">Приложения</button>
             </li>
             <li class="filters-item">
-              <button class="filters-button" type="button">Маркетинг</button>
+              <button class="filters-button" type="button" data-filter="design">Дизайн</button>
+            </li>
+            <li class="filters-item">
+              <button class="filters-button" type="button" data-filter="marketing">
+                Маркетинг
+              </button>
             </li>
           </ul>
 
           <!--project-portfolio -->
 
           <ul class="projects-list">
-            <li class="projects-item">
+            <li class="projects-item websites">
               <a class="projects-link" href="#">
                 <div class="projects-overlay">
                   <picture>
@@ -160,7 +164,7 @@
               </a>
             </li>
 
-            <li class="projects-item">
+            <li class="projects-item design">
               <a class="projects-link" href="#">
                 <div class="projects-overlay">
                   <picture>
@@ -229,7 +233,7 @@
               </a>
             </li>
 
-            <li class="projects-item">
+            <li class="projects-item app">
               <a class="projects-link" href="#">
                 <div class="projects-overlay">
                   <picture>
@@ -299,7 +303,7 @@
               </a>
             </li>
 
-            <li class="projects-item">
+            <li class="projects-item marketing">
               <a class="projects-link" href="#">
                 <div class="projects-overlay">
                   <picture>
@@ -369,7 +373,7 @@
               </a>
             </li>
 
-            <li class="projects-item">
+            <li class="projects-item app">
               <a class="projects-link" href="#">
                 <div class="projects-overlay">
                   <picture>
@@ -439,7 +443,7 @@
               </a>
             </li>
 
-            <li class="projects-item">
+            <li class="projects-item websites">
               <a class="projects-link" href="#">
                 <div class="projects-overlay">
                   <picture>
@@ -508,7 +512,7 @@
               </a>
             </li>
 
-            <li class="projects-item">
+            <li class="projects-item design">
               <a class="projects-link" href="#">
                 <div class="projects-overlay">
                   <picture>
@@ -578,7 +582,7 @@
               </a>
             </li>
 
-            <li class="projects-item">
+            <li class="projects-item marketing">
               <a class="projects-link" href="#">
                 <div class="projects-overlay">
                   <picture>
@@ -647,7 +651,7 @@
               </a>
             </li>
 
-            <li class="projects-item">
+            <li class="projects-item websites">
               <a class="projects-link" href="#">
                 <div class="projects-overlay">
                   <picture>
@@ -796,5 +800,6 @@
     </footer>
 
     <script src="./js/menu.js"></script>
+    <script src="./js/filter.js"></script>
   </body>
 </html>

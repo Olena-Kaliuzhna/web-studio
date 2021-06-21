@@ -1,39 +1,52 @@
 .contacts-section {
   display: flex;
   justify-content: space-around;
-}
-
-@media (max-width: 1200px) {
-  .contacts-section {
+  @media (max-width: 1200px) {
     flex-wrap: wrap;
     justify-content: center;
   }
 }
 
 .contacts-wrapper {
-  padding: 20px;
-  border: 1px solid $accent-color;
+  width: 100%;
+  max-width: 450px;
+  background: $primary-white-color;
+  padding: 0 30px 30px;
   box-shadow: 0 3px 35px rgba(0, 0, 0, 0.1);
-  text-align: center;
-  color: #757575;
-}
-@media (max-width: 1200px) {
-  .contacts-wrapper {
+  border-radius: 2px;
+  @media (max-width: 1200px) {
     margin-bottom: 30px;
   }
-}
 
-@media (max-width: 400px) {
-  .contacts-wrapper {
-    padding: 10px;
+  @media (max-width: 480px) {
+    padding: 0 15px 15px;
   }
 }
 
 .contacts-logo-wrapper {
   width: 100%;
-  padding: 10px 0;
-  background-color: #f2f2f2;
+  margin: 0 -30px 30px;
+  padding: 15px 30px;
+  width: calc(100% + 60px);
+  line-height: 1.5;
+  text-align: center;
+  font-size: 20px;
+  font-weight: 700;
+  text-transform: uppercase;
+  background: $accent-color;
+  & .logo {
+    font-style: normal;
+    color: $primary-white-color;
+  }
+
+  @media (max-width: 480px) {
+    margin: 0 -15px 30px;
+    padding: 15px 30px;
+    width: calc(100% + 30px);
+    font-size: 18px;
+  }
 }
+
 .contacts-list {
   @extend .list;
   &:not(:last-child) {
@@ -50,6 +63,11 @@
   line-height: 1.71;
   letter-spacing: 0.03em;
   color: $primary-text-color;
+
+  @media (max-width: 480px) {
+    font-size: 20px;
+    line-height: 1.2;
+  }
 }
 
 .contacts-mail,
@@ -72,12 +90,17 @@
   &:focus {
     color: $accent-color;
   }
+
+  @media (max-width: 480px) {
+    font-size: 20px;
+    line-height: 1.2;
+  }
 }
 
 .contacts-icon {
   margin: 0;
   margin-right: 10px;
-
+  fill: $primary-text-color;
   &:focus,
   &:hover,
   .contacts-link:focus &,

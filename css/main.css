@@ -365,7 +365,7 @@ p {
 
 .main-header {
   position: relative;
-  border-bottom: 1px solid #ECECEC;
+  border-bottom: 1px solid #ececec;
 }
 
 .page-nav {
@@ -778,6 +778,12 @@ p {
   font-size: 16px;
   line-height: 1.87;
   letter-spacing: 0.06em;
+}
+
+@media screen and (max-width: 480px) {
+  .button {
+    min-width: 150px;
+  }
 }
 
 .backdrop {
@@ -1195,7 +1201,7 @@ p {
 }
 
 .our-team-main {
-  background: #F5F4FA;
+  background: #f5f4fa;
 }
 
 .our-team-list {
@@ -1216,7 +1222,7 @@ p {
   max-width: 450px;
   margin: 15px;
   border-radius: 0 0 4px 4px;
-  background: #FFFFFF;
+  background: #ffffff;
   -webkit-box-shadow: 0 2px 1px rgba(0, 0, 0, 0.2), 0 1px 1px rgba(0, 0, 0, 0.14), 0 1px 3px rgba(0, 0, 0, 0.12);
           box-shadow: 0 2px 1px rgba(0, 0, 0, 0.2), 0 1px 1px rgba(0, 0, 0, 0.14), 0 1px 3px rgba(0, 0, 0, 0.12);
 }
@@ -1358,7 +1364,7 @@ p {
 }
 
 .footer-section {
-  background: #2F303A;
+  background: #2f303a;
   padding-top: 60px;
   padding-bottom: 60px;
 }
@@ -1539,7 +1545,7 @@ p {
   -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
           box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
-  background-color: #2F303A;
+  background-color: #2f303a;
   font-family: "Roboto", sans-serif;
   font-weight: 400;
   font-size: 16px;
@@ -1839,12 +1845,13 @@ p {
 }
 
 .contacts-wrapper {
-  padding: 20px;
-  border: 1px solid #2196F3;
+  width: 100%;
+  max-width: 450px;
+  background: #ffffff;
+  padding: 0 30px 30px;
   -webkit-box-shadow: 0 3px 35px rgba(0, 0, 0, 0.1);
           box-shadow: 0 3px 35px rgba(0, 0, 0, 0.1);
-  text-align: center;
-  color: #757575;
+  border-radius: 2px;
 }
 
 @media (max-width: 1200px) {
@@ -1853,16 +1860,37 @@ p {
   }
 }
 
-@media (max-width: 400px) {
+@media (max-width: 480px) {
   .contacts-wrapper {
-    padding: 10px;
+    padding: 0 15px 15px;
   }
 }
 
 .contacts-logo-wrapper {
   width: 100%;
-  padding: 10px 0;
-  background-color: #f2f2f2;
+  margin: 0 -30px 30px;
+  padding: 15px 30px;
+  width: calc(100% + 60px);
+  line-height: 1.5;
+  text-align: center;
+  font-size: 20px;
+  font-weight: 700;
+  text-transform: uppercase;
+  background: #2196F3;
+}
+
+.contacts-logo-wrapper .logo {
+  font-style: normal;
+  color: #ffffff;
+}
+
+@media (max-width: 480px) {
+  .contacts-logo-wrapper {
+    margin: 0 -15px 30px;
+    padding: 15px 30px;
+    width: calc(100% + 30px);
+    font-size: 18px;
+  }
 }
 
 .contacts-list:not(:last-child) {
@@ -1878,6 +1906,13 @@ p {
   line-height: 1.71;
   letter-spacing: 0.03em;
   color: #757575;
+}
+
+@media (max-width: 480px) {
+  .contacts-address {
+    font-size: 20px;
+    line-height: 1.2;
+  }
 }
 
 .contacts-mail,
@@ -1905,9 +1940,18 @@ p {
   color: #2196F3;
 }
 
+@media (max-width: 480px) {
+  .contacts-mail,
+  .contacts-tel {
+    font-size: 20px;
+    line-height: 1.2;
+  }
+}
+
 .contacts-icon {
   margin: 0;
   margin-right: 10px;
+  fill: #757575;
 }
 
 .contacts-icon:focus, .contacts-icon:hover,
@@ -1917,10 +1961,8 @@ p {
 }
 
 .contact-form {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
   width: 100%;
-  max-width: 400px;
+  max-width: 450px;
   background: #ffffff;
   padding: 0 30px 30px;
   -webkit-box-shadow: 0 3px 35px rgba(0, 0, 0, 0.1);
@@ -1929,8 +1971,7 @@ p {
 }
 
 .contact-form__title {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  width: 100%;
   margin: 0 -30px 30px;
   padding: 15px 30px;
   width: calc(100% + 60px);
